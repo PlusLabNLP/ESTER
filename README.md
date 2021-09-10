@@ -9,7 +9,7 @@ Final data used for the experiments are saved in `./data/` folder with train/dev
 - **original_events** and **indices** are the annotator-provided event triggers plus their indices in the context.
 - **answer_texts** and **answer_indices** (in train and dev) are the annotator-provided answers plus their indices in the context.
 
-#### Please Note the evaluation script below (II) only works for the dev set for now as we are currently setting up a leaderboard for evaluating the test set.
+#### __Please Note__: the evaluation script below (II) only works for the dev set for now as we are currently setting up a leaderboard for evaluating the test set.
 #### Instruction for submissions will appear here shortly. Thanks for your patience.
 
 # Models
