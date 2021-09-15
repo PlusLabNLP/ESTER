@@ -1,5 +1,5 @@
 # Project / Paper Introduction
-This is the project repo for our EMNLP'21 paper: 
+This is the project repo for our EMNLP'21 paper: https://arxiv.org/abs/2104.08350
 
 Here, we provide brief descriptions of the final data and detailed instructions to reproduce results in our paper. For more details, please refer to the paper.
 
@@ -9,8 +9,8 @@ Final data used for the experiments are saved in `./data/` folder with train/dev
 - **original_events** and **indices** are the annotator-provided event triggers plus their indices in the context.
 - **answer_texts** and **answer_indices** (in train and dev) are the annotator-provided answers plus their indices in the context.
 
-#### __Please Note__: the evaluation script below (II) only works for the dev set for now as we are currently setting up a leaderboard for evaluating the test set.
-#### Instruction for submissions will appear here shortly. Thanks for your patience.
+#### __Please Note__: the evaluation script below (II) only works for the dev set. Please refer to Section III for submission to our leaderboard: https://eventqa.github.io
+
 
 # Models
 ## I. Install packages. 
@@ -59,7 +59,15 @@ Simply run `bash ./code/eval_span_pred.sh` as it is.
 - Set `pw`, `lrs` and `batch` according to model folder names again.
 
 
-## III. Model Training
+## III. Submission to ESTER Leaderboard
+- Set `model_dir` to your target models
+- Run `leaderboard.sh`, which outputs `pred_dev.json` and `pred_test.json` under `./output`
+- If you write your own code to output predictions, make sure they follow our original sample order.
+- Email `pred_test.json` to us following in the format specified here: https://eventqa.github.io
+Sample outputs (using one of our UnifiedQA-large models) are provided under `./output`
+
+
+## IV. Model Training
 We also provide the model training scripts below.
 
 ### 1. Generative QA: Fine-tuning in Table 3.

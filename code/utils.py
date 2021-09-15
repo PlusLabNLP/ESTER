@@ -452,7 +452,7 @@ class ClassificationReport:
         return res
 
 
-def convert_to_features_ans_gen(data, sep_tok, eval=False):
+def convert_to_features_ans_gen(data, sep_tok, eval=False, leaderboard=False):
     samples = []
     counter = 0
 
@@ -464,6 +464,8 @@ def convert_to_features_ans_gen(data, sep_tok, eval=False):
                       'events': [x.lower() for x in v['events']],
                       'types': v['type'],
                       'inputs': inputs}
+        elif leaderboard:
+            sample = {'inputs': inputs}
         else:
             sample = {'labels': sep_tok.join([x.lower() for x in v['answer_texts']]),
                       'types': v['type'],
