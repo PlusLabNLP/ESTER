@@ -19,7 +19,9 @@ We list the packages in our environment in env.yml file for your reference. Belo
 - pytorch=1.6.0
 - transformers=3.1.0
 - cudatoolkit=10.1.243
-- apex=0.1
+- apex=0.1 
+
+To install apex, you can either follow official instruction: https://github.com/NVIDIA/apex or conda: https://anaconda.org/conda-forge/nvidia-apex
 
 ## II. Replicate results in our paper.
 ### 1. Download trained models.

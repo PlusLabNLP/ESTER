@@ -21,7 +21,7 @@ do
   do
 	    for seed in "${seeds[@]}"
 	    do
-        python run_ans_generation_model.py \
+        python code/run_ans_generation_model.py \
         --data_dir "./data/" \
         --model ${model} \
         --save_model \

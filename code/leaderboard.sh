@@ -24,7 +24,7 @@ do
   do
 	    for seed in "${seeds[@]}"
 	    do
-        python ./code/leaderboard.py \
+        python code/leaderboard.py \
         --data_dir "./data/" \
         --model ${model} \
         --task_name  ${task} \

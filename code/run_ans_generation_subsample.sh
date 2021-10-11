@@ -19,7 +19,7 @@ do
   do
 	    for seed in "${seeds[@]}"
 	    do
-        nohup python run_ans_generation_model.py \
+        nohup python code/run_ans_generation_model.py \
         --data_dir "./data/" \
         --model ${model} \
         --save_model \
