@@ -8,6 +8,7 @@ Final data used for the experiments are saved in `./data/` folder with train/dev
 - **question_event**: this field is not provided by annotators nor used for our experiments. We simply use some heuristic rules based on POS tags to extract possible events in the questions. Users are encourages to try alternative tools such semantic role labeling. 
 - **original_events** and **indices** are the annotator-provided event triggers plus their indices in the context.
 - **answer_texts** and **answer_indices** (in train and dev) are the annotator-provided answers plus their indices in the context.
+- You may find duplicate passageID. This is because we have multiple sets (collections) of passages when launching our annotation tasks on MTurk. The passageID corresponds to the index of the passage in a particular set. We don't use passageID for any experiments or analysis. If you need a unique identifier for passage, simply use their raw text.
 
 #### __Please Note__: the evaluation script below (II) only works for the dev set. Please refer to Section III for submission to our leaderboard: https://eventqa.github.io
 
